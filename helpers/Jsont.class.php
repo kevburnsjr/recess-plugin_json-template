@@ -1,4 +1,6 @@
 <?php
+Library::import('recess.lang.PathFinder');
+Library::import('Jsont.lib.JsonTemplate');
 Library::import('recess.framework.AbstractHelper');
 
 /**
@@ -101,9 +103,6 @@ class Jsont extends AbstractHelper{
 	 * @return boolean True if successful, throws exception if unsuccessful.
 	 */
 	public static function draw($templateName = '', $context = array()) {
-		if(!is_array($context) && !is_object($context)) {
-			throw new RecessFrameworkException("Part::drawArray must be called with an array.", 1);
-		}
 		if($templateName === '') {
 			throw new RecessFrameworkException("First parameter 'partPath' must not be empty.", 1);
 		}
