@@ -12,8 +12,11 @@ h3. Installation Process
 # Modify your Application
 ** Library::import('Jsont.JsontPlugin');
 ** $this->plugins = array( new JsontPlugin() );
+# That's it!
 
-h3. Use it
+h3. Example Usage
+
+_post/list.html.jsont_
 
 pre. {.section posts}
 <ul class="posts">  
@@ -25,3 +28,7 @@ pre. {.section posts}
 
 pre. $posts = $post->all();
 echo Jsont::draw('post/list', $posts);
+
+h3. More info on JSON Template
+
+"http://json-template.googlecode.com/svn/trunk/doc/Introducing-JSON-Template.html":http://json-template.googlecode.com/svn/trunk/doc/Introducing-JSON-Template.html
