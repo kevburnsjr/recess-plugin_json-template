@@ -1,0 +1,27 @@
+h1. JSON Template for Recess
+
+This is a Plugin for the "Recess PHP Framework":http://www.recessframework.org/ which adds a view helper for JSON Template rendering.
+
+h3. Requires
+<br>
+* Recess >= 0.2
+
+h3. Installation Process
+
+# Download this repository to plugins/Jsont
+# Modify your Application
+** Library::import('Jsont.JsontPlugin');
+** $this->plugins = array( new JsontPlugin() );
+
+h3. Use it
+
+pre. {.section posts}
+<ul class="posts">  
+{.repeated section @}
+  <li>{title} by {author}</li>
+{.end}
+</ul>
+{.end}
+
+pre. $posts = $post->all();
+echo Jsont::draw('post/list', $posts);
